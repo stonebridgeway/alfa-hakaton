@@ -2,13 +2,13 @@ import { IconButton } from '@alfalab/core-components/icon-button';
 import { Typography } from '@alfalab/core-components/typography';
 import { AlfaBankLIcon } from '@alfalab/icons-logotype/AlfaBankLIcon';
 import { BellMIcon } from '@alfalab/icons-glyph/BellMIcon';
-import { PowerButtonMIcon } from '@alfalab/icons-glyph/PowerButtonMIcon';
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 import { useMarkRead, useNotifications } from '../api/hooks';
 import { useAuth } from '../auth/AuthContext';
 import { dateTime } from '../utils/format';
+import { ExitMIcon } from './icons';
 
 export interface NavItem {
     to: string;
@@ -65,7 +65,7 @@ export function AppHeader({ nav, home, bank = false }: { nav: NavItem[]; home: s
                         </Typography.Text>
                     </div>
                     <IconButton
-                        icon={PowerButtonMIcon}
+                        icon={ExitMIcon}
                         colors='inverted'
                         aria-label='Выйти'
                         title='Выйти'
